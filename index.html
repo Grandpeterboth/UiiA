@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UiiA - Utilisation intelligente des interfaces et Aides numériques</title>
+    <title>UiiA - Utilisation intelligente des interfaces & aides numériques</title>
+    <meta name="description" content="Formation professionnelle pour exploiter efficacement et en sécurité l'IA et les outils numériques dans vos métiers">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
@@ -14,11 +13,10 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            min-height: 100vh;
+            background: #fafafa;
         }
 
         .container {
@@ -28,451 +26,255 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #1e3a5f, #f59e0b, #6b7280);
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
         }
 
         nav {
+            background: white;
             padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .logo {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #1e3a5f;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            letter-spacing: -0.02em;
-        }
-
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: #1e3a5f;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
-        }
-
-        .logo-icon::before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            background: white;
-            border-radius: 3px;
-            position: absolute;
-            top: 8px;
-            left: 8px;
-        }
-
-        .logo-icon::after {
-            content: '';
-            width: 12px;
-            height: 12px;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
+        nav ul {
             list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
         }
 
-        .nav-links a {
+        nav a {
             text-decoration: none;
-            color: #1e3a5f;
+            color: #2c3e50;
             font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
         }
 
-        .nav-links a:hover {
-            color: #f59e0b;
-            transform: translateY(-1px);
+        nav a:hover {
+            background: #3498db;
+            color: white;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #f59e0b;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        main {
+        section {
             padding: 4rem 0;
         }
 
-        .hero {
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
             text-align: center;
-            color: white;
-            margin-bottom: 5rem;
-            animation: fadeInUp 1s ease;
         }
 
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.01em;
+        h3 {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 1rem;
         }
 
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
-        }
-
-        .cta-button {
-            display: inline-block;
+        .intro {
             background: white;
-            color: #1e3a5f;
-            padding: 1.2rem 2.5rem;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
+            text-align: center;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            padding: 3rem 0;
         }
 
         .modules {
-            margin: 5rem 0;
+            background: white;
         }
 
-        .module-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .module-header h2 {
-            color: white;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .module-header p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .modules-grid {
+        .module-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-
-        .module-card {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(15px);
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            align-items: start;
+            margin-top: 2rem;
         }
 
-        .module-card:hover {
+        .module {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .module:hover {
             transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .module-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #1e3a5f, #2c5282);
+            background: #3498db;
             color: white;
-            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 2rem;
-            box-shadow: 0 10px 20px rgba(30, 58, 95, 0.3);
-            flex-shrink: 0;
+            font-weight: bold;
+            margin-bottom: 1rem;
         }
 
-        .module-content h3 {
-            color: #1e3a5f;
-            margin-bottom: 0.5rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .module-objective {
-            color: #f59e0b;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .module-content p {
-            color: #4b5563;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .module-highlights {
+        .module ul {
             list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            margin: 1rem 0;
         }
 
-        .module-highlights li {
-            color: #6b7280;
-            padding: 1rem 1.5rem;
-            background: rgba(30, 58, 95, 0.05);
-            border-radius: 12px;
+        .module li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
             position: relative;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            border-left: 3px solid #f59e0b;
         }
 
-        .rules-section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 4rem 0;
-            text-align: center;
+        .module li:before {
+            content: "■";
+            color: #3498db;
+            position: absolute;
+            left: 0;
         }
 
-        .rules-section h2 {
-            color: #1e3a5f;
-            margin-bottom: 2rem;
-            font-size: 2.2rem;
-            font-weight: 700;
+        .regles {
+            background: #ecf0f1;
         }
 
-        .rules-grid {
+        .regles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
-        .rule-item {
+        .regle {
+            background: white;
             padding: 1.5rem;
-            background: rgba(30, 58, 95, 0.05);
-            border-radius: 15px;
-            border: 1px solid rgba(30, 58, 95, 0.1);
-            text-align: left;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
         }
 
-        .rule-item h4 {
-            color: #1e3a5f;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-            font-weight: 600;
+        .regle-number {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        .rule-item p {
-            color: #6b7280;
-            font-size: 0.9rem;
-            line-height: 1.5;
+        .objectifs {
+            background: white;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+        .objectifs ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .objectifs li {
+            background: #f8f9fa;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            font-size: 1.1rem;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
             text-align: center;
+            padding: 4rem 0;
         }
 
-        .stat-item {
+        .cta h2 {
             color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: white;
-            display: block;
-            margin-bottom: 0.5rem;
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         footer {
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
+            background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 3rem 0;
-            margin-top: 4rem;
+            padding: 2rem 0;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
         }
 
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.8rem;
-            color: rgba(255, 255, 255, 0.9);
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #3498db;
         }
 
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1e3a5f;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
+        .evaluation {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            border-left: 4px solid #ffc107;
         }
 
-        .contact-icon.email::before {
-            content: '';
-            width: 24px;
-            height: 16px;
-            border: 2px solid #1e3a5f;
-            border-radius: 4px;
-            position: relative;
+        .evaluation strong {
+            color: #856404;
         }
 
-        .contact-icon.email::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 8px solid #1e3a5f;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%);
-        }
-
-        .contact-icon.location::before {
-            content: '';
-            width: 16px;
-            height: 20px;
-            border: 2px solid #1e3a5f;
-            border-radius: 8px 8px 8px 0;
-            transform: rotate(-45deg);
-            position: relative;
-        }
-
-        .contact-icon.location::after {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: #1e3a5f;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-            @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
             }
             
-            .nav-links {
-                gap: 1rem;
-            }
-            
-            .contact-info {
+            nav ul {
                 flex-direction: column;
-                gap: 2rem;
-            }
-
-            .module-card {
-                grid-template-columns: 1fr;
+                gap: 0.5rem;
                 text-align: center;
-                gap: 1.5rem;
             }
-
-            .module-number {
-                margin: 0 auto;
+            
+            .module-grid,
+            .regles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 2rem 0;
             }
         }
     </style>
@@ -480,148 +282,167 @@
 <body>
     <header>
         <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <div class="logo-icon"></div>
-                    UiiA
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#programme">Programme</a></li>
-                    <li><a href="#methode">Méthode</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>UiiA</h1>
+            <p class="subtitle">Utilisation intelligente des interfaces & aides numériques</p>
         </div>
     </header>
 
-    <main>
+    <nav>
         <div class="container">
-            <section class="hero">
-                <h1>Utilisation intelligente des interfaces et Aides numériques</h1>
-                <p>Formation professionnelle pour exploiter efficacement et en toute sécurité les interfaces et aides numériques dans vos usages métiers.</p>
-                <a href="#contact" class="cta-button">Découvrir le programme</a>
-            </section>
-
-            <section class="modules" id="programme">
-                <div class="module-header">
-                    <h2>Programme de formation</h2>
-                    <p>Une approche progressive et structurée pour maîtriser les interfaces et aides numériques</p>
-                </div>
-                
-                <div class="modules-grid">
-                    <div class="module-card">
-                        <div class="module-number">1</div>
-                        <div class="module-content">
-                            <h3>Comprendre & Tester</h3>
-                            <div class="module-objective">Bases techniques et méthodologiques</div>
-                            <p>Acquérir les concepts fondamentaux pour comprendre le fonctionnement et les usages de l'IA et autres outils numériques.</p>
-                            <ul class="module-highlights">
-                                <li>Vocabulaire spécialisé : IA générative, machine learning, big data</li>
-                                <li>Fonctionnement simplifié et mise en pratique</li>
-                                <li>Approche "cas d'usage" alignée sur les besoins réels</li>
-                                <li>Tests d'outils variés sur des cas métiers simples</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="module-card">
-                        <div class="module-number">2</div>
-                        <div class="module-content">
-                            <h3>Réaliser & Documenter</h3>
-                            <div class="module-objective">Projet numérique enrichi à l'IA</div>
-                            <p>Mener un projet complet du prototypage à la documentation avec une méthodologie éprouvée.</p>
-                            <ul class="module-highlights">
-                                <li>Projets de niveau croissant (recherche, site vitrine, chatbot)</li>
-                                <li>Comparaison "avec/sans IA" pour identifier la valeur ajoutée</li>
-                                <li>Méthode projet : cadrage, tests, documentation</li>
-                                <li>Veille et benchmark d'outils</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="module-card">
-                        <div class="module-number">3</div>
-                        <div class="module-content">
-                            <h3>Sécuriser & Prendre du recul</h3>
-                            <div class="module-objective">Aspects réglementaires et éthiques</div>
-                            <p>Intégrer les dimensions légales, sécuritaires et éthiques dans l'usage professionnel des outils numériques.</p>
-                            <ul class="module-highlights">
-                                <li>Cadre réglementaire : RGPD, AI Act, bonnes pratiques</li>
-                                <li>Sécurité : contrôle d'accès, protection des données</li>
-                                <li>Réflexion éthique : biais, transparence, impact emploi</li>
-                                <li>Mesure d'efficacité et indicateurs de performance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="rules-section" id="methode">
-                <h2>Les 7 Règles d'Or UiiA</h2>
-                <p style="color: #6b7280; margin-bottom: 2rem; font-size: 1.1rem;">Méthodologie transversale appliquée tout au long de la formation</p>
-                <div class="rules-grid">
-                    <div class="rule-item">
-                        <h4>R1 : Savoir faire sans l'outil</h4>
-                        <p>Maintenir l'autonomie et tester la résilience face aux pannes technologiques.</p>
-                    </div>
-                    <div class="rule-item">
-                        <h4>R2 : Connaître le cadre réglementaire</h4>
-                        <p>Maîtriser les obligations légales (RGPD, AI Act) et les bonnes pratiques.</p>
-                    </div>
-                    <div class="rule-item">
-                        <h4>R4 : Sécuriser l'accès aux outils</h4>
-                        <p>Mettre en place des contrôles d'accès et des mesures de sécurité appropriées.</p>
-                    </div>
-                    <div class="rule-item">
-                        <h4>R5 : Sécuriser le stockage des données</h4>
-                        <p>Garantir la protection et la confidentialité des informations traitées.</p>
-                    </div>
-                    <div class="rule-item">
-                        <h4>R6 : Comparer avec d'autres outils</h4>
-                        <p>Benchmarker les solutions pour faire les meilleurs choix technologiques.</p>
-                    </div>
-                    <div class="rule-item">
-                        <h4>R7 : Évaluer l'efficacité</h4>
-                        <p>Mesurer les résultats par rapport aux objectifs fixés initialement.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="stats">
-                <div class="stat-item">
-                    <span class="stat-number">3</span>
-                    <span>Modules progressifs</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">7</span>
-                    <span>Règles d'or</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span>Pratique métier</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">IA+</span>
-                    <span>Outils intégrés</span>
-                </div>
-            </section>
+            <ul>
+                <li><a href="#objectifs">Objectifs</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#regles">Règles d'Or</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </main>
+    </nav>
+
+    <section class="intro">
+        <div class="container">
+            <p>Former les professionnels à exploiter efficacement et en toute sécurité les interfaces et aides numériques — principalement l'IA, mais aussi les outils non-IA — dans leurs usages métiers.</p>
+        </div>
+    </section>
+
+    <section id="objectifs" class="objectifs">
+        <div class="container">
+            <h2>Objectifs Généraux</h2>
+            <ul>
+                <li>Une compréhension claire des concepts</li>
+                <li>Une capacité à réaliser des projets concrets</li>
+                <li>Une maîtrise du cadre réglementaire et éthique</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="modules" class="modules">
+        <div class="container">
+            <h2>Programme de Formation</h2>
+            <div class="module-grid">
+                <div class="module">
+                    <div class="module-number">1</div>
+                    <h3>Comprendre & Tester</h3>
+                    <p><strong>Objectif :</strong> Acquérir les bases techniques et méthodologiques pour comprendre le fonctionnement et les usages de l'IA et autres outils numériques.</p>
+                    <ul>
+                        <li>Vocabulaire spécialisé : IA générative, machine learning, big data</li>
+                        <li>Fonctionnement simplifié : réseaux de neurones, prompts</li>
+                        <li>Avantages et limites : performance, biais, coûts</li>
+                        <li>Mise en pratique sur des cas métiers simples</li>
+                        <li>Approche "cas d'usage" alignée sur les besoins réels</li>
+                    </ul>
+                    <div class="evaluation">
+                        <strong>Évaluation :</strong> QCM sur les concepts clés
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-number">2</div>
+                    <h3>Réaliser & Documenter</h3>
+                    <p><strong>Objectif :</strong> Savoir mener un projet numérique enrichi à l'IA, du prototypage à la documentation.</p>
+                    <ul>
+                        <li>Niveau 1 : recherche approfondie, présentation PPT/podcast</li>
+                        <li>Niveau 2 : site vitrine avec intégration basique d'IA</li>
+                        <li>Niveau 3 : FAQ automatisée, chatbot métier, automatisation</li>
+                        <li>Comparaison "avec/sans IA"</li>
+                        <li>Méthode projet complète et veille technologique</li>
+                    </ul>
+                    <div class="evaluation">
+                        <strong>Évaluation :</strong> Présentation orale d'un dossier documenté
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-number">3</div>
+                    <h3>Sécuriser & Prendre du Recul</h3>
+                    <p><strong>Objectif :</strong> Intégrer les aspects réglementaires, de sécurité et d'éthique dans les usages professionnels.</p>
+                    <ul>
+                        <li>Cadre réglementaire : RGPD, AI Act</li>
+                        <li>Sécurité : contrôle des accès, protection des données</li>
+                        <li>Réflexion éthique : biais, transparence, impact emploi</li>
+                        <li>Mesure d'efficacité et indicateurs de performance</li>
+                        <li>Approche "savoir se passer de l'outil"</li>
+                    </ul>
+                    <div class="evaluation">
+                        <strong>Évaluation :</strong> Présentation orale avec questions/réponses
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="regles" class="regles">
+        <div class="container">
+            <h2>Les 7 Règles d'Or</h2>
+            <div class="regles-grid">
+                <div class="regle">
+                    <div class="regle-number">R1</div>
+                    <strong>Savoir faire sans</strong><br>
+                    Maintenir ses compétences sans dépendre de l'outil
+                </div>
+                <div class="regle">
+                    <div class="regle-number">R2</div>
+                    <strong>Connaître le cadre réglementaire</strong><br>
+                    Respecter les obligations légales et normatives
+                </div>
+                <div class="regle">
+                    <div class="regle-number">R3</div>
+                    <strong>Connaître avantages & limites</strong><br>
+                    Évaluer objectivement les outils utilisés
+                </div>
+                <div class="regle">
+                    <div class="regle-number">R4</div>
+                    <strong>Sécuriser l'accès aux outils</strong><br>
+                    Contrôler les permissions et authentifications
+                </div>
+                <div class="regle">
+                    <div class="regle-number">R5</div>
+                    <strong>Sécuriser le stockage des données</strong><br>
+                    Protéger les informations sensibles
+                </div>
+                <div class="regle">
+                    <div class="regle-number">R6</div>
+                    <strong>Comparer avec d'autres outils</strong><br>
+                    Faire des choix éclairés et objectifs
+                </div>
+                <div class="regle">
+                    <div class="regle-number">R7</div>
+                    <strong>Évaluer l'efficacité</strong><br>
+                    Mesurer l'atteinte des objectifs fixés
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à maîtriser l'IA en toute sécurité ?</h2>
+            <p>Rejoignez notre formation UiiA et développez vos compétences numériques professionnelles</p>
+            <br>
+            <a href="#contact" class="btn">Nous contacter</a>
+        </div>
+    </section>
 
     <footer id="contact">
         <div class="container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
-                    <span>contact@uiia.fr</span>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>UiiA Formation</h4>
+                    <p>Utilisation intelligente des interfaces & aides numériques</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <span>Issy-les-Moulineaux</span>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email : contact@uiia.fr<br>
+                    Téléphone : +33 (0)1 XX XX XX XX</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Informations</h4>
+                    <p>Formation professionnelle<br>
+                    Éligible CPF<br>
+                    Adaptée à tous secteurs</p>
                 </div>
             </div>
-            <p>&copy; 2025 UiiA. Tous droits réservés.</p>
+            <p>&copy; 2024 UiiA - Tous droits réservés</p>
         </div>
     </footer>
 </body>
-          </html>
+</html>
